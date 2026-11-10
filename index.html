@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a3528">
+  <meta name="description" content="MonStudio Web crée des sites vitrines, menus de commande WhatsApp, outils web et automatisations pour les commerçants au Bénin. Prix accessibles et livraison rapide.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 124'%3E%3Crect x='4' y='4' width='112' height='104' rx='30' fill='%230f4d3a'/%3E%3Cpath d='M22 98L12 120l40-16z' fill='%230f4d3a'/%3E%3Cpath d='M34 74V32l26 26 26-26v42' fill='none' stroke='%23fff' stroke-width='13' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='34' y='88' width='52' height='8' rx='4' fill='%23e8731a'/%3E%3C/svg%3E">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_BJ">
+  <meta property="og:title" content="MonStudio Web : sites web et outils pour commerçants au Bénin">
+  <meta property="og:description" content="Sites vitrines, menus de commande WhatsApp, outils web et automatisations. Prix accessibles, livraison rapide.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"MonStudio Web","telephone":"+2290167808100","areaServed":"BJ","address":{"@type":"PostalAddress","addressLocality":"Cotonou","addressCountry":"BJ"}}</script>
+  <title>MonStudio Web — Sites web et outils pour commerçants au Bénin</title>
+  <style>
+    :root {
+      --green: #0f4d3a;
+      --green-dark: #0a3528;
+      --orange: #e8731a;
+      --cream: #faf6ee;
+      --white: #fff;
+      --ink: #1d2420;
+      --muted: #5b6660;
+      --line: #e3dccd;
+      --shadow: 0 8px 26px rgba(15, 77, 58, .09);
+      --header-height: 72px;
+      --content-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-height) + 16px);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, nav, button, input, select, textarea, .button, .price {
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: var(--content-width);
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section {
+      padding: 82px 0;
+      scroll-margin-top: calc(var(--header-height) + 16px);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.15;
+      letter-spacing: -.8px;
+    }
+
+    .intro {
+      max-width: 60ch;
+      margin: 0 0 34px;
+      color: var(--muted);
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--orange);
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* En-tête et logo */
+    .site-header {
+      position: fixed;
+      z-index: 20;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-height);
+      color: var(--white);
+      background: rgba(10, 53, 40, .97);
+      border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .header-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--white);
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-mark svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .brand-web {
+      color: #f2a05f;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .main-nav a {
+      padding: 8px 0;
+      color: #dfe9e3;
+      font-size: .84rem;
+      font-weight: 650;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      color: var(--white);
+      text-decoration: underline;
+      text-decoration-color: var(--orange);
+      text-underline-offset: 7px;
+    }
+
+    /* Boutons */
+    .button {
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 11px 20px;
+      border: 0;
+      border-radius: 7px;
+      color: var(--white);
+      background: #1fa855;
+      font-size: .9rem;
+      font-weight: 750;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #178a45;
+    }
+
+    .button-outline {
+      border: 1px solid var(--green);
+      color: var(--green);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 3px;
+    }
+
+    /* Accueil */
+    #accueil {
+      min-height: 620px;
+      padding: calc(var(--header-height) + 85px) 0 80px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 82% 25%, rgba(232, 115, 26, .18), transparent 25%),
+        var(--green);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    #accueil .eyebrow {
+      color: #ffc18e;
+    }
+
+    #accueil h1 {
+      max-width: 720px;
+      margin: 0 0 20px;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.06;
+      letter-spacing: -2px;
+    }
+
+    #accueil h1 span {
+      color: #f4a36a;
+      font-style: italic;
+    }
+
+    #accueil .hero-copy {
+      max-width: 52ch;
+      margin: 0 0 28px;
+      color: #d5e2d9;
+      font-size: 1.05rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button-light {
+      border: 1px solid rgba(255, 255, 255, .55);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .button-light:hover {
+      background: rgba(255, 255, 255, .1);
+    }
+
+    .chat-preview {
+      max-width: 370px;
+      justify-self: center;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, .2);
+      border-radius: 22px;
+      background: #092d23;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .23);
+      transform: rotate(1deg);
+    }
+
+    .chat-screen {
+      padding: 17px;
+      border-radius: 14px;
+      color: var(--ink);
+      background: #eee8dd;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: .82rem;
+    }
+
+    .chat-bubble {
+      width: fit-content;
+      max-width: 92%;
+      margin-bottom: 10px;
+      padding: 9px 12px;
+      border-radius: 12px;
+      background: var(--white);
+    }
+
+    .chat-bubble.sent {
+      margin-left: auto;
+      background: #d9fdd3;
+    }
+
+    .chat-label {
+      margin-top: 12px;
+      color: #e0ebe3;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: .72rem;
+      text-align: center;
+    }
+
+    /* Services */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .service-card {
+      min-height: 235px;
+      padding: 25px 22px;
+      background: var(--white);
+    }
+
+    .service-card:nth-child(even) {
+      background: #f7f5ee;
+    }
+
+    .service-card + .service-card {
+      border-left: 1px solid var(--line);
+    }
+
+    .service-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 15px;
+      color: var(--orange);
+    }
+
+    .service-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      margin: 0 0 8px;
+      color: var(--green);
+      font-size: 1.08rem;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Tarifs */
+    #tarifs {
+      background: var(--white);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 22px;
+      overflow-x: auto;
+      padding: 2px 2px 8px;
+      scrollbar-width: thin;
+    }
+
+    .tab-button {
+      flex: 0 0 auto;
+      padding: 10px 16px;
+      border: 1px solid var(--green);
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--white);
+      font-size: .85rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .tab-button[aria-selected="true"],
+    .tab-button:hover {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .plan {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--cream);
+    }
+
+    .plan.featured {
+      border: 2px solid var(--orange);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .plan h3 {
+      margin: 0;
+      color: var(--green);
+      font-size: 1.1rem;
+    }
+
+    .price {
+      margin: 7px 0 15px;
+      color: var(--green);
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .plan ul {
+      min-height: 130px;
+      margin: 0;
+      padding: 14px 0 0 19px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .plan li {
+      margin-bottom: 6px;
+    }
+
+    .plan .button {
+      width: 100%;
+      margin-top: 14px;
+      font-size: .82rem;
+    }
+
+    .pricing-note {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* Réalisations */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .project-art {
+      min-height: 185px;
+      display: grid;
+      place-items: center;
+      padding: 20px;
+      color: var(--white);
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .project-art.hotel {
+      background: linear-gradient(135deg, #16324a, #c8963e);
+    }
+
+    .project-art.restaurant {
+      background: linear-gradient(135deg, #b3361b, #e9a23b);
+    }
+
+    .project-body {
+      padding: 18px 20px 20px;
+    }
+
+    .project-body h3 {
+      margin: 0 0 4px;
+      color: var(--green);
+      font-size: 1.08rem;
+    }
+
+    .project-body p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .demo-link {
+      color: #b95714;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: .9rem;
+      font-weight: 750;
+      text-underline-offset: 4px;
+    }
+
+    /* Contact */
+    #contact {
+      color: var(--white);
+      background: var(--green-dark);
+    }
+
+    #contact h2 {
+      color: var(--white);
+    }
+
+    #contact .intro {
+      color: #c5d6cc;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 60px;
+    }
+
+    .contact-details {
+      color: #d1ded5;
+    }
+
+    .contact-details p {
+      margin: 0 0 12px;
+    }
+
+    .contact-details a {
+      color: #ffc18e;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 13px;
+    }
+
+    .contact-form label {
+      display: grid;
+      gap: 5px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: .88rem;
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: 7px;
+      color: var(--ink);
+      background: var(--white);
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-note {
+      margin: -4px 0 0;
+      color: #b9cbbf;
+      font-size: .78rem;
+    }
+
+    .contact-form .button {
+      justify-self: start;
+    }
+
+    /* Pied de page et bouton WhatsApp flottant */
+    footer {
+      padding: 22px 0;
+      color: #b8c9bf;
+      background: #06221a;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: .85rem;
+    }
+
+    footer {
+      padding-bottom: calc(22px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-inner a {
+      color: #f2a05f;
+      text-decoration: none;
+    }
+
+    .floating-wa {
+      position: fixed;
+      z-index: 30;
+      right: 18px;
+      bottom: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--white);
+      border-radius: 50%;
+      color: var(--white);
+      background: #1fa855;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+      transition: transform .18s ease, background .18s ease;
+    }
+
+    .floating-wa:hover {
+      transform: translateY(-3px);
+      background: #178a45;
+    }
+
+    .floating-wa svg {
+      width: 30px;
+      height: 30px;
+      fill: currentColor;
+    }
+
+    /* Apparition des sections */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+
+    .js .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 800px) {
+      :root {
+        --header-height: 82px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+      }
+
+      .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 22px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .main-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .main-nav a {
+        font-size: .75rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr .7fr;
+        gap: 28px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .service-card:nth-child(3) {
+        border-left: 0;
+      }
+
+      .service-card:nth-child(n + 3) {
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-grid {
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      footer { padding-bottom: 90px; }
+      .wrap {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      #accueil {
+        padding-top: calc(var(--header-height) + 54px);
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      #accueil h1 {
+        font-size: clamp(2.35rem, 11vw, 3.5rem);
+      }
+
+      .chat-preview {
+        display: none;
+      }
+
+      .service-grid,
+      .plans,
+      .project-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 0;
+      }
+
+      .service-card + .service-card,
+      .service-card:nth-child(3) {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .plan ul {
+        min-height: 0;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#accueil" aria-label="MonStudio Web, accueil">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 124" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="112" height="104" rx="30" fill="#1fa855"/>
+            <path d="M22 98L12 120l40-16z" fill="#1fa855"/>
+            <path d="M34 74V32l26 26 26-26v42" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="34" y="88" width="52" height="8" rx="4" fill="#f2a05f"/>
+          </svg>
+        </span>
+        <span>MonStudio <span class="brand-web">Web</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Création web au Bénin</p>
+          <h1>Votre commerce visible en ligne, et vos clients vous écrivent sur <span>WhatsApp</span></h1>
+          <p class="hero-copy">
+            Sites web, menus de commande WhatsApp, outils de calcul et automatisation de vos fichiers.
+            Livraison rapide, prix accessibles.
+          </p>
+          <div class="hero-actions">
+            <a class="button js-wa" href="https://wa.me/2290167808100?text=Bonjour%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener noreferrer" data-message="Bonjour, je souhaite un devis.">
+              Demander un devis sur WhatsApp <span aria-hidden="true">↗</span>
+            </a>
+            <a class="button button-light" href="#tarifs">Voir les tarifs</a>
+          </div>
+        </div>
+
+        <div class="chat-preview" aria-hidden="true">
+          <div class="chat-screen">
+            <div class="chat-bubble">Bonjour, je voudrais 2 poulets braisés et 1 jus de bissap.</div>
+            <div class="chat-bubble sent">Bien reçu ! Total : 7 500 FCFA. Livraison dans 30 min.</div>
+            <div class="chat-bubble">Parfait, merci.</div>
+          </div>
+          <p class="chat-label">Une commande simple, directement sur WhatsApp</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="reveal">
+      <div class="wrap">
+        <p class="eyebrow">Nos services</p>
+        <h2>Quatre services pour vendre plus et travailler moins</h2>
+        <p class="intro">Choisissez un service seul ou combinez-les. Chaque réalisation est adaptée à votre activité.</p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8M12 18v3"/></svg>
+            </div>
+            <h3>Site vitrine</h3>
+            <p>Présentez votre activité, vos produits et vos horaires. Vos clients vous trouvent sur Google et vous contactent en un clic.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5h2l2 10h9l2-7H7"/><circle cx="10" cy="19" r="1.2"/><circle cx="17" cy="19" r="1.2"/></svg>
+            </div>
+            <h3>Menu WhatsApp</h3>
+            <p>Vos produits et vos prix sur une page. Les commandes arrivent directement sur votre WhatsApp.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"/></svg>
+            </div>
+            <h3>Outil web</h3>
+            <p>Calculateur de marges, de rendement ou de prêt : un outil personnalisé, utilisable sur téléphone.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h6"/><path d="M17 14l3 3-3 3"/></svg>
+            </div>
+            <h3>Automatisation</h3>
+            <p>Nettoyage, fusion et traitement de fichiers Excel pour vous livrer des données et rapports propres.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="tarifs" class="reveal">
+      <div class="wrap">
+        <p class="eyebrow">Tarifs</p>
+        <h2>Des tarifs clairs, sans surprise</h2>
+        <p class="intro">Paiement de 50 % à la commande et le reste à la livraison. Deux modifications gratuites sont incluses.</p>
+
+        <div class="tabs" role="tablist" aria-label="Choisir un service pour afficher les tarifs"></div>
+        <div class="plans" id="plans" aria-live="polite"></div>
+        <noscript><p class="pricing-note">Pour voir les tarifs, activez JavaScript ou écrivez-nous sur WhatsApp.</p></noscript>
+        <p class="pricing-note" id="pricing-note"></p>
+      </div>
+    </section>
+
+    <section id="realisations" class="reveal">
+      <div class="wrap">
+        <p class="eyebrow">Démonstrations</p>
+        <h2>Découvrez des exemples de réalisations</h2>
+        <p class="intro">Explorez les démos interactives du site de réservation d’hôtel et du menu de commande WhatsApp.</p>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art hotel" aria-hidden="true">Hôtel Le Baobab</div>
+            <div class="project-body">
+              <h3>Site de réservation d’hôtel</h3>
+              <p>Chambres, services et demande de réservation sur WhatsApp.</p>
+              <a class="demo-link" href="demo-hotel.html">Voir la démo <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art restaurant" aria-hidden="true">Taki Délices</div>
+            <div class="project-body">
+              <h3>Menu et commande WhatsApp</h3>
+              <p>Menu avec photos, panier et commande envoyée sur WhatsApp.</p>
+              <a class="demo-link" href="demo-menu.html">Voir la démo <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2>Parlons de votre projet</h2>
+        <p class="intro">Remplissez le formulaire. Votre demande s’ouvrira dans WhatsApp, prête à être envoyée.</p>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <p>Une question ou un projet en tête ? Écrivez-nous directement.</p>
+            <p><strong>MonStudio Web</strong><br>Cotonou, Bénin</p>
+            <p>WhatsApp : <a href="https://wa.me/2290167808100" target="_blank" rel="noopener noreferrer">+229 01 67 80 81 00</a></p>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <label for="nom">Votre nom
+              <input id="nom" name="nom" type="text" required autocomplete="name">
+            </label>
+
+            <label for="telephone">Votre téléphone
+              <input id="telephone" name="telephone" type="tel" inputmode="tel" required autocomplete="tel">
+            </label>
+
+            <label for="service-souhaite">Service souhaité
+              <select id="service-souhaite" name="service" required>
+                <option value="" selected disabled>Choisissez un service</option>
+                <option>Site vitrine</option>
+                <option>Menu WhatsApp</option>
+                <option>Outil web</option>
+                <option>Automatisation</option>
+                <option>Autre demande</option>
+              </select>
+            </label>
+
+            <label for="message">Message
+              <textarea id="message" name="message" placeholder="Décrivez votre activité et votre besoin"></textarea>
+            </label>
+
+            <button class="button" type="submit">Envoyer sur WhatsApp <span aria-hidden="true">↗</span></button>
+            <p class="form-note">WhatsApp s’ouvrira avec votre message prérempli. Vous pourrez le vérifier avant l’envoi.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> MonStudio Web · Cotonou, Bénin</span>
+      <a href="https://wa.me/2290167808100" target="_blank" rel="noopener noreferrer">WhatsApp : +229 01 67 80 81 00</a>
+    </div>
+  </footer>
+
+  <a
+    class="floating-wa js-wa"
+    href="https://wa.me/2290167808100?text=Bonjour%2C%20je%20souhaite%20un%20devis."
+    target="_blank"
+    rel="noopener noreferrer"
+    data-message="Bonjour, je souhaite un devis."
+    aria-label="Demander un devis sur WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16 3.2A12.6 12.6 0 0 0 5.2 22.3l-1.7 6.2 6.4-1.7A12.6 12.6 0 1 0 16 3.2Zm0 22.9c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.8 1 1-3.7-.3-.4a10.2 10.2 0 1 1 9.1 4.8Zm5.6-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.7.1-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.2-.2.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.6s1.1 3 1.2 3.2c.2.2 2.2 3.4 5.3 4.7.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z"/>
+    </svg>
+  </a>
+
+  <script>
+    "use strict";
+
+    const WHATSAPP_NUMBER = "2290167808100";
+    const whatsappUrl = (message) =>
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+    document.querySelectorAll(".js-wa").forEach((link) => {
+      link.href = whatsappUrl(link.dataset.message);
+    });
+
+    const services = {
+      "Site vitrine": {
+        note: "Maintenance (modifications, mises à jour, hébergement) : 5 000 à 15 000 FCFA par mois.",
+        plans: [
+          { name: "Basique", price: "30 000 FCFA", items: ["1 page", "Présentation et contact", "Bouton WhatsApp", "Google Maps"] },
+          { name: "Standard", price: "60 000 FCFA", featured: true, items: ["3 à 5 pages", "Produits et services", "Galerie photos", "Réseaux sociaux"] },
+          { name: "Premium", price: "100 000 FCFA", items: ["Tout le Standard", "Nom de domaine", "Formulaire de contact", "Référencement Google de base"] }
+        ]
+      },
+      "Menu WhatsApp": {
+        note: "Mise à jour des produits et des prix : 3 000 à 10 000 FCFA par mois.",
+        plans: [
+          { name: "Basique", price: "20 000 FCFA", items: ["10 à 20 produits", "Photos et prix", "Bouton « Commander »"] },
+          { name: "Standard", price: "35 000 FCFA", featured: true, items: ["Jusqu'à 50 produits", "Catégories", "Commande récapitulée sur WhatsApp"] },
+          { name: "Premium", price: "55 000 FCFA", items: ["Tout le Standard", "Lien personnalisé", "QR code imprimable", "Modification facile des prix"] }
+        ]
+      },
+      "Outil web": {
+        note: "Idéal pour les coopératives, ONG, écoles et entreprises qui font encore leurs calculs à la main.",
+        plans: [
+          { name: "Basique", price: "40 000 FCFA", items: ["Un calcul simple", "Marge, conversion ou rendement"] },
+          { name: "Standard", price: "80 000 FCFA", featured: true, items: ["Plusieurs paramètres", "Résultats clairs", "Affichage soigné sur mobile"] },
+          { name: "Premium", price: "130 000 FCFA", items: ["Tout le Standard", "Export PDF", "Logo du client", "Graphiques"] }
+        ]
+      },
+      "Automatisation": {
+        note: "Les données de vos fichiers restent confidentielles et ne sont jamais partagées.",
+        plans: [
+          { name: "Petite tâche", price: "5 000 à 25 000 FCFA", items: ["Nettoyer ou fusionner un fichier", "Renommer des fichiers en lot"] },
+          { name: "Projet", price: "30 000 à 80 000 FCFA", featured: true, items: ["Script réutilisable", "Traite plusieurs fichiers", "Rapport propre en sortie"] },
+          { name: "Gros projet", price: "100 000 à 150 000 FCFA", items: ["Chaîne complète de traitement", "Mode d'emploi inclus"] }
+        ]
+      }
+    };
+
+    const tabs = document.querySelector(".tabs");
+    document.getElementById("plans").setAttribute("role", "tabpanel");
+    const plansContainer = document.getElementById("plans");
+    const pricingNote = document.getElementById("pricing-note");
+    const serviceNames = Object.keys(services);
+
+    function renderPlans(serviceName) {
+      const service = services[serviceName];
+      plansContainer.textContent = "";
+
+      service.plans.forEach((plan) => {
+        const card = document.createElement("article");
+        card.className = `plan${plan.featured ? " featured" : ""}`;
+
+        const title = document.createElement("h3");
+        title.textContent = plan.name;
+
+        const price = document.createElement("p");
+        price.className = "price";
+        price.textContent = plan.price;
+
+        const list = document.createElement("ul");
+        plan.items.forEach((itemText) => {
+          const item = document.createElement("li");
+          item.textContent = itemText;
+          list.appendChild(item);
+        });
+
+        const link = document.createElement("a");
+        link.className = "button";
+        link.href = whatsappUrl(`Bonjour, je souhaite la formule ${plan.name} du service « ${serviceName} ».`);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "Demander cette formule";
+
+        card.append(title, price, list, link);
+        plansContainer.appendChild(card);
+      });
+
+      pricingNote.textContent = service.note;
+
+      tabs.querySelectorAll("button").forEach((tab) => {
+        const selected = tab.dataset.service === serviceName;
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+    }
+
+    serviceNames.forEach((serviceName, index) => {
+      const tab = document.createElement("button");
+      tab.className = "tab-button";
+      tab.type = "button";
+      tab.setAttribute("role", "tab");
+      tab.id = `service-tab-${index}`;
+      tab.dataset.service = serviceName;
+      tab.setAttribute("aria-controls", "plans");
+      tab.setAttribute("aria-selected", "false");
+      tab.tabIndex = -1;
+      tab.textContent = serviceName;
+      tab.addEventListener("click", () => renderPlans(serviceName));
+
+      tab.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
+        event.preventDefault();
+
+        const direction = event.key === "ArrowRight" ? 1 : -1;
+        const nextIndex = (index + direction + serviceNames.length) % serviceNames.length;
+        const nextTab = tabs.querySelectorAll("button")[nextIndex];
+        nextTab.focus();
+        renderPlans(serviceNames[nextIndex]);
+      });
+
+      tabs.appendChild(tab);
+    });
+
+    renderPlans("Site vitrine");
+
+    document.getElementById("contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(event.currentTarget);
+      const message = document.getElementById("message").value.trim();
+      const request = [
+        "Bonjour, je souhaite un devis.",
+        `Nom : ${formData.get("nom")}`,
+        `Téléphone : ${formData.get("telephone")}`,
+        `Service souhaité : ${formData.get("service")}`,
+        message ? `Message : ${message}` : ""
+      ].filter(Boolean).join("\n");
+
+      const lien = document.createElement("a");
+      lien.href = whatsappUrl(request);
+      lien.target = "_blank";
+      lien.rel = "noopener noreferrer";
+      document.body.appendChild(lien);
+      lien.click();
+      lien.remove();
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const revealSections = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealSections.forEach((section) => observer.observe(section));
+    } else {
+      revealSections.forEach((section) => section.classList.add("visible"));
+    }
+  </script>
+</body>
+</html>

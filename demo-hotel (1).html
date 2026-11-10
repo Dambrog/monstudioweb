@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hôtel Le Baobab - Chambres et réservation WhatsApp</title>
+<meta name="description" content="Hôtel Le Baobab : chambres climatisées, petit-déjeuner, Wi-Fi. Réservez directement sur WhatsApp.">
+<style>
+:root{--nuit:#16324a;--or:#c8963e;--creme:#f8f4ec;--encre:#1b2630;--gris:#5f6b75;--ligne:#e2dac8}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;background:var(--creme);color:var(--encre);line-height:1.65}
+h1,h2,h3,button,input,select,textarea,label,.tag,nav{font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+nav{background:var(--nuit);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:14px 18px}
+nav b{font-size:1.05rem}
+nav a{color:#e9dcc0;text-decoration:none;font-size:.9rem;margin-left:14px}
+.hero{background:linear-gradient(rgba(22,50,74,.78),rgba(22,50,74,.88)),linear-gradient(135deg,#2b5879,#c8963e);color:#fff;padding:80px 0 70px;text-align:center}
+.hero h1{font-size:clamp(2rem,6vw,3rem);line-height:1.15;margin-bottom:12px}
+.hero p{max-width:50ch;margin:0 auto 26px;color:#e6edf2}
+.btn{display:inline-block;background:var(--or);color:#17212b;font-weight:700;border:0;border-radius:8px;padding:13px 24px;text-decoration:none;cursor:pointer;font-size:1rem}
+.btn:hover{background:#d8a54c}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #6aa7d4;outline-offset:2px}
+section{padding:56px 0}
+h2{color:var(--nuit);font-size:clamp(1.5rem,4vw,2rem);margin-bottom:8px}
+.sous{color:var(--gris);margin-bottom:26px;max-width:58ch}
+.chambres{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.chambre{background:#fff;border:1px solid var(--ligne);border-radius:12px;overflow:hidden}
+.vue{height:150px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:"Trebuchet MS",Arial,sans-serif;font-weight:700;background:linear-gradient(135deg,#2b5879,#16324a)}
+.corps{padding:16px 18px}
+.corps h3{color:var(--nuit)}
+.corps ul{margin:8px 0 10px 18px;font-size:.92rem;color:var(--gris)}
+.prix{font-family:"Trebuchet MS",Arial,sans-serif;font-weight:700;font-size:1.25rem;color:#8a5f12}
+.prix small{font-weight:400;font-size:.8rem;color:var(--gris)}
+.chambre .btn{margin-top:10px;padding:10px 16px;font-size:.9rem}
+.equip{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.equip div{background:#fff;border-left:4px solid var(--or);padding:14px 16px;border-radius:6px;font-size:.95rem}
+.equip b{display:block;font-family:"Trebuchet MS",Arial,sans-serif;color:var(--nuit)}
+#reserver{background:var(--nuit);color:#fff}
+#reserver h2{color:#fff}
+#reserver .sous{color:#c3d1dc}
+form{display:grid;gap:14px;max-width:520px}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:grid;gap:5px;font-size:.9rem}
+input,select,textarea{padding:12px;border-radius:8px;border:0;font-size:1rem;width:100%}
+textarea{min-height:80px;resize:vertical}
+.estim{background:rgba(255,255,255,.1);border-radius:8px;padding:12px 14px;font-family:"Trebuchet MS",Arial,sans-serif;font-size:.95rem}
+footer{background:#0e2133;color:#a9bac7;text-align:center;padding:22px 16px;font-size:.88rem;font-family:"Trebuchet MS",Arial,sans-serif}
+@media(max-width:520px){.deux{grid-template-columns:1fr}nav a{margin-left:9px;font-size:.8rem}}
+</style>
+</head>
+<body>
+<nav>
+  <b>Hôtel Le Baobab</b>
+  <div><a href="#chambres">Chambres</a><a href="#services">Services</a><a href="#reserver">Réserver</a></div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>Un séjour calme au cœur de Cotonou</h1>
+    <p>Chambres climatisées, petit-déjeuner inclus, Wi-Fi rapide et accueil 24h/24. Réservez en quelques clics sur WhatsApp.</p>
+    <a class="btn" href="#reserver">Réserver ma chambre</a>
+  </div>
+</header>
+
+<main>
+<section id="chambres">
+  <div class="wrap">
+    <h2>Nos chambres</h2>
+    <p class="sous">Des tarifs clairs par nuit, petit-déjeuner compris.</p>
+    <div class="chambres" id="chambres-liste"></div>
+  </div>
+</section>
+
+<section id="services" style="background:#efe8d8">
+  <div class="wrap">
+    <h2>Ce qui est inclus</h2>
+    <p class="sous">Tout ce dont vous avez besoin pour un séjour d'affaires ou de détente.</p>
+    <div class="equip">
+      <div><b>Wi-Fi gratuit</b>Dans toutes les chambres et les espaces communs.</div>
+      <div><b>Petit-déjeuner</b>Servi de 6h30 à 10h.</div>
+      <div><b>Parking sécurisé</b>Gardé jour et nuit.</div>
+      <div><b>Transfert aéroport</b>Sur demande, tarif à confirmer sur WhatsApp.</div>
+    </div>
+  </div>
+</section>
+
+<section id="reserver">
+  <div class="wrap">
+    <h2>Demande de réservation</h2>
+    <p class="sous">Choisissez vos dates : votre demande s'ouvre dans WhatsApp, prête à envoyer. La réception confirme la disponibilité.</p>
+    <form id="form">
+      <label>Votre nom <input id="nom" required autocomplete="name"></label>
+      <label>Type de chambre <select id="type"></select></label>
+      <div class="deux">
+        <label>Arrivée <input type="date" id="arr" required></label>
+        <label>Départ <input type="date" id="dep" required></label>
+      </div>
+      <label>Nombre de personnes <input type="number" id="pers" min="1" max="6" value="1"></label>
+      <label>Message (facultatif) <textarea id="msg" placeholder="Arrivée tardive, transfert aéroport..."></textarea></label>
+      <div class="estim" id="estim">Choisissez vos dates pour voir le prix estimé.</div>
+      <button class="btn" type="submit">Envoyer ma demande sur WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>Hôtel Le Baobab · Cotonou, Bénin · WhatsApp : +229 01 67 80 81 00 · Page de démonstration</footer>
+
+<script>
+// ====== À MODIFIER ======
+const NUMERO = "2290167808100";   // numéro WhatsApp de l'hôtel
+const CHAMBRES = [
+  {nom:"Chambre Standard", prix:25000, liste:["Lit double, climatisation","Douche privée, TV","1 à 2 personnes"]},
+  {nom:"Chambre Confort", prix:35000, liste:["Grand lit, climatisation, balcon","Bureau, minibar","1 à 2 personnes"]},
+  {nom:"Suite Familiale", prix:55000, liste:["Chambre + salon, 2 salles d'eau","Climatisation, Wi-Fi, TV","Jusqu'à 4 personnes"]}
+];
+const fmt = n => n.toLocaleString("fr-FR").replace(/\u202f/g," ") + " FCFA";
+const wa = t => "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(t);
+
+const liste = document.getElementById("chambres-liste");
+const select = document.getElementById("type");
+CHAMBRES.forEach((c,i) => {
+  const d = document.createElement("article");
+  d.className = "chambre";
+  d.innerHTML = "<div class='vue'>Photo : " + c.nom + "</div><div class='corps'><h3>" + c.nom + "</h3><ul>" +
+    c.liste.map(x => "<li>" + x + "</li>").join("") + "</ul><div class='prix'>" + fmt(c.prix) + " <small>/ nuit</small></div>" +
+    "<a class='btn' href='#reserver' data-i='" + i + "'>Choisir cette chambre</a></div>";
+  d.querySelector("a").onclick = () => { select.value = i; calc(); };
+  liste.appendChild(d);
+  select.add(new Option(c.nom + " – " + fmt(c.prix), i));
+});
+
+const arr = document.getElementById("arr"), dep = document.getElementById("dep");
+const aujourdhui = new Date().toISOString().slice(0,10);
+arr.min = aujourdhui; dep.min = aujourdhui;
+
+function nuits(){
+  if (!arr.value || !dep.value) return 0;
+  return Math.round((new Date(dep.value) - new Date(arr.value)) / 86400000);
+}
+function calc(){
+  const n = nuits(), e = document.getElementById("estim");
+  if (n <= 0){ e.textContent = arr.value && dep.value ? "La date de départ doit être après l'arrivée." : "Choisissez vos dates pour voir le prix estimé."; return; }
+  e.textContent = n + " nuit(s) × " + fmt(CHAMBRES[select.value].prix) + " = " + fmt(n * CHAMBRES[select.value].prix) + " (estimation, à confirmer par l'hôtel)";
+}
+[arr, dep, select].forEach(el => el.addEventListener("change", calc));
+
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const n = nuits();
+  if (n <= 0){ calc(); return; }
+  const c = CHAMBRES[select.value];
+  let t = "Bonjour, je souhaite réserver :\n- Chambre : " + c.nom +
+    "\n- Arrivée : " + arr.value + "\n- Départ : " + dep.value + " (" + n + " nuit(s))" +
+    "\n- Personnes : " + document.getElementById("pers").value +
+    "\n- Estimation : " + fmt(n * c.prix) +
+    "\n- Nom : " + document.getElementById("nom").value;
+  const m = document.getElementById("msg").value.trim();
+  if (m) t += "\n- Message : " + m;
+  window.open(wa(t), "_blank");
+});
+</script>
+</body>
+</html>
